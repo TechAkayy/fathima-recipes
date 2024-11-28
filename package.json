@@ -1,16 +1,16 @@
 {
-  "name": "pg-nuxt-tailwindcss",
+  "name": "fathima-recipes",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pg-nuxt-tailwindcss.netlify.app",
+  "homepage": "https://fathima-recipes.netlify.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinegrow/pg-nuxt-tailwindcss.git"
+    "url": "https://github.com/techakayy/fathima-recipes.git"
   },
   "scripts": {
     "dev": "nuxt dev",
     "now": "npm run build && npm run preview",
-    "lighthouse": "npx unlighthouse --no-cache --site https://pg-nuxt-tailwindcss.netlify.app",
+    "lighthouse": "npx unlighthouse --no-cache --site https://fathima-recipes.netlify.app",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
