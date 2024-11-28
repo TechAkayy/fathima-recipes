@@ -39,33 +39,43 @@
 </script>
 
 <template layout="default">
-  <div>
+  <div v-if="recipe">
     <article class="max-w-4xl mx-auto px-4 py-12">
       <div class="mb-8">
-        <img alt="Traditional Tamil Cooking" class="w-full h-[400px] object-cover rounded-lg shadow-lg" :src="recipe.featuredImage.node.link"/>
+        <img
+          alt="Traditional Tamil Cooking"
+          class="w-full h-[400px] object-cover rounded-lg shadow-lg"
+          :src="recipe.featuredImage.node.sourceUrl"
+        />
       </div>
 
       <div class="space-y-6">
         <div class="flex items-center gap-4 text-primary-600">
-          <time datetime="2024-01-15">{{ new Date(recipe.date).toDateString() }}</time>
+          <time datetime="2024-01-15">{{
+            new Date(recipe.date).toDateString()
+          }}</time>
           <span>•</span>
           <span>Tamil Cuisine</span>
         </div>
 
         <h1 class="font-serif text-4xl md:text-5xl text-primary-800 mb-4">
           {{ title }}
-        </h1><p v-html="recipe.content"></p>
-
-        
-
-        
-
-        
+        </h1>
+        <p v-html="recipe.content" />
 
         <div class="flex flex-wrap gap-2 mt-8">
-          <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full">#TamilCuisine</span>
-          <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full">#TraditionalCooking</span>
-          <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full">#CulinaryHeritage</span>
+          <span
+            class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full"
+            >#TamilCuisine</span
+          >
+          <span
+            class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full"
+            >#TraditionalCooking</span
+          >
+          <span
+            class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full"
+            >#CulinaryHeritage</span
+          >
         </div>
       </div>
     </article>
